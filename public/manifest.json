@@ -1,0 +1,17 @@
+{
+  "name": "Maik Finance",
+  "short_name": "Maik Finance",
+  "description": "Control de gastos personales",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07070F",
+  "theme_color": "#07070F",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://api.dicebear.com/7.x/shapes/svg?seed=maik&backgroundColor=07070F",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ]
+}
