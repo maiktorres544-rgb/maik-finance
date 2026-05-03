@@ -38,10 +38,10 @@ const daysInMonth = (y,m) => new Date(y,m+1,0).getDate();
 // ─── STORAGE ──────────────────────────────────────────────────────────────────
 const KEY = "maikfinance_v3";
 async function loadDB() {
-  try { const r=await window.storage.get(KEY); return r?JSON.parse(r.value):freshDB(); }
+  try { const r=localStorage.getItem(KEY); return r?JSON.parse(r):freshDB(); }
   catch { return freshDB(); }
 }
-async function saveDB(db) { try { await window.storage.set(KEY,JSON.stringify(db)); } catch {} }
+async function saveDB(db) { try { localStorage.setItem(KEY,JSON.stringify(db)); } catch {} }
 function freshDB() {
   return {
     months:     {},   // { "2026-05": { income, expenses[], budgets{} } }
